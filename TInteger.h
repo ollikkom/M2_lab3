@@ -48,20 +48,20 @@ public:
     TInteger& operator%=(const long long int val);
 
 
-    bool TestV(long long int val);
+    bool TestV(const long long int val);
 };
 
 TInteger operator+(const TInteger& i, const TInteger& j);
-TInteger operator+(const TInteger& i, long long int val);
+TInteger operator+(const TInteger& i, const long long int val);
 TInteger operator+(const long long int val, const TInteger& i);
 TInteger operator-(const TInteger& i, const TInteger& j);
-TInteger operator-(const TInteger& i, long long int val);
+TInteger operator-(const TInteger& i, const long long int val);
 TInteger operator-(const long long int val, const TInteger& i);
 TInteger operator/(const TInteger& i, const TInteger& j);
-TInteger operator/(const TInteger& i, long long int val);
+TInteger operator/(const TInteger& i, const long long int val);
 TInteger operator/(const long long int val, const TInteger& i);
 TInteger operator%(const TInteger& i, const TInteger& j);
-TInteger operator%(const TInteger& i, long long int val);
+TInteger operator%(const TInteger& i, const long long int val);
 TInteger operator%(const long long int val, const TInteger& i);
 
 class ExceptionV
