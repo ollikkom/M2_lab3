@@ -3,7 +3,7 @@
 TInteger::TInteger()
 {}
 
-TInteger::TInteger(long long int val) {
+TInteger::TInteger(const long long int val) {
     TestV(val);
     value = val;
 }

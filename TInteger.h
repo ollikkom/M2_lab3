@@ -15,7 +15,7 @@ public:
 
     TInteger();
 
-    TInteger(long long int val);
+    TInteger(const long long int val);
 
     ~TInteger();
 
