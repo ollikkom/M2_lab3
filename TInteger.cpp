@@ -20,6 +20,11 @@ TInteger& TInteger::operator=(const TInteger& right)
     return *this;
 }
 
+TInteger::operator int () //?????
+{
+    return value;
+}
+
 TInteger& TInteger::operator=(const long long int right)
 {
     TestV(right);
@@ -91,7 +96,8 @@ TInteger operator+( const TInteger& i, const long long int val)
     return TInteger(i) += val;
 }
 
-TInteger operator+( const long long int val, const TInteger& i) {
+TInteger operator+( const long long int val, const TInteger& i)
+{
     return TInteger(i) += val;
 }
 
@@ -181,30 +187,39 @@ TInteger & TInteger::operator%=(const long long int val)
     return *this;
 }
 //префиксная версия возвращает значение после инкремента
-TInteger& TInteger::operator++() {
+TInteger& TInteger::operator++()
+{
     value++;
     return *this;
 }
 
 //постфиксная версия возвращает значение до инкремента
-TInteger TInteger::operator++(int) {
+TInteger TInteger::operator++(int)
+{
     TInteger oldValue(value);
     value++;
     return oldValue;
 }
 
 //префиксная версия возвращает значение после декремента
-TInteger& TInteger::operator--() {
+TInteger& TInteger::operator--()
+{
     value--;
     return *this;
 }
 
 //постфиксная версия возвращает значение до декремента
-TInteger TInteger::operator--(int) {
+TInteger TInteger::operator--(int)
+{
     TInteger oldValue(value);
     value--;
     return oldValue;
 }
 
+std::ostream & operator<<(std::ostream &out, const TInteger &right)
+{
+    out << right.value;
+    return out;
+}
 
 

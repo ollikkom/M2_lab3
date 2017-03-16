@@ -21,6 +21,7 @@ public:
 
     TInteger& operator=(const TInteger& right);
     TInteger& operator=(const long long int right);
+    operator int (); // ????
 
     //префиксный декримент
     TInteger& operator--();
@@ -47,6 +48,7 @@ public:
     TInteger& operator%=(const TInteger & right);
     TInteger& operator%=(const long long int val);
 
+    friend std::ostream & operator<<(std::ostream &, const TInteger &);
 
     bool TestV(const long long int val);
 };
